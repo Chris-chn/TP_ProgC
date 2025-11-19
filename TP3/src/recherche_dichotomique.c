@@ -1,30 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 int main() {
     int tableau[100];
-    int i, recherche;
+    int i;
+    int recherche;
     int debut, fin, milieu;
     int trouve = 0;
 
-    // Initialiser la graine pour les nombres aléatoires
-    srand(time(NULL));
-
-    // Remplir le tableau avec des nombres aléatoires entre -50 et 50
+    // Créer un tableau trié de 100 entiers (par exemple de 1 à 100)
     for(i = 0; i < 100; i++) {
-        tableau[i] = rand() % 101 - 50;
-    }
-
-    // Trier le tableau par ordre croissant (tri à bulles simple)
-    for(i = 0; i < 99; i++) {
-        for(int j = 0; j < 99 - i; j++) {
-            if(tableau[j] > tableau[j + 1]) {
-                int temp = tableau[j];
-                tableau[j] = tableau[j + 1];
-                tableau[j + 1] = temp;
-            }
-        }
+        tableau[i] = i + 1;  // Tableau trié croissant : 1, 2, 3, ..., 100
     }
 
     // Afficher le tableau trié
