@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "operator.h"
+#include "operator.c"
 
 int main() {
     int num1, num2;
