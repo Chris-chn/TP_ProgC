@@ -1,7 +1,8 @@
 #include <stdio.h>
 
+// Fonction pour afficher les octets d'une variable
 void afficher_octets(void *ptr, size_t taille) {
-    unsigned char *octet = (unsigned char *)ptr; // pointeur vers les octets
+    unsigned char *octet = (unsigned char *)ptr;
     for (size_t i = 0; i < taille; i++) {
         printf("%02x ", octet[i]);
     }
@@ -9,13 +10,13 @@ void afficher_octets(void *ptr, size_t taille) {
 }
 
 int main() {
-    // Déclaration et initialisation de variables de différents types
+    // Déclaration et initialisation de différentes variables
     short s = 0x0203;
     int i = 0x01020304;
     long int li = 0x0102030405060708;
-    float f = 9.5;           // exemple de float
-    double d = 1.0;          // exemple de double
-    long double ld = 1.0L;   // exemple de long double
+    float f = 9.5f;
+    double d = 1.0;
+    long double ld = 1.0L;
 
     // Affichage des octets
     printf("Octets de short :\n");
